@@ -125,22 +125,23 @@ def action_one(i,j,k,R1,R2):
     l = 1.6
     r = 0.4
     dt = 0.1
-    u1 = (2*3.14*r*0)/60   #R1 and R2 diff for every subfunction
-    u2 = (2*3.14*r*R1)/60  
+    u1 = (2*3.14*0)/60   #R1 and R2 diff for every subfunction
+    u2 = (2*3.14*R1)/60  
     
     v = (r/2)*((u1/r)+ (u2/r))*0.1
     w = (r/l)*((u2/r) - (u1/r))/20
     
     theta = k 
     theta = angle_approximation(theta)
+    k = theta
     point1 = i
     point2 = j
 
         
     for iterations in range(30):   # for 1 sec :- 0.05*20
 
-        dj = (r/2)*(u1 + u2)*(math.cos(math.radians(theta))*dt)
-        di = (r/2)*(u1 + u2)*(math.sin(math.radians(theta))*dt)
+        dj = (r/2)*(u1 + u2)*(math.cos(math.radians(k))*dt)
+        di = (r/2)*(u1 + u2)*(math.sin(math.radians(k))*dt)
         d_theta = (r/l)*(u2-u1)*dt
         j = j + dj
         i = i + di
@@ -182,20 +183,21 @@ def action_two(i,j,k,R1,R2):
     l = 1.6
     r = 0.4
     dt = 0.1
-    u1 = (2*3.14*r*R1)/60   #R1 and R2 diff for every subfunction
-    u2 = (2*3.14*r*0)/60
+    u1 = (2*3.14*R1)/60   #R1 and R2 diff for every subfunction
+    u2 = (2*3.14*0)/60
     
     v = (r/2)*((u1/r)+ (u2/r))*0.1
     w = (r/l)*((u2/r) - (u1/r))/20
     theta = k 
     theta = angle_approximation(theta)
+    k = theta
     point1 = i
     point2 = j
         
     for iterations in range(30):   # for 1 sec :- 0.05*20
 
-        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(theta))*dt)
-        di = (r/2)*(u1 +u2)*(math.sin(math.radians(theta))*dt)
+        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(k))*dt)
+        di = (r/2)*(u1 +u2)*(math.sin(math.radians(k))*dt)
         d_theta = (r/l)*(u2-u1)*dt
         j = j + dj
         i = i + di
@@ -238,21 +240,22 @@ def action_three(i,j,k,R1,R2):
     l = 1.6
     r = 0.4
     dt = 0.1
-    u1 = (2*3.14*r*R1)/60   #R1 and R2 diff for every subfunction
-    u2 = (2*3.14*r*R1)/60  
+    u1 = (2*3.14*R1)/60   #R1 and R2 diff for every subfunction
+    u2 = (2*3.14*R1)/60  
     
     v = (r/2)*((u1/r)+ (u2/r))*0.1
     w = (r/l)*((u2/r) - (u1/r))/20
     
     theta = k 
     theta = angle_approximation(theta)
+    k = theta
     point1 = i
     point2 = j
         
     for iterations in range(30):   # for 1 sec :- 0.05*20
 
-        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(theta))*dt)
-        di = (r/2)*(u1 +u2)*(math.sin(math.radians(theta))*dt)
+        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(k))*dt)
+        di = (r/2)*(u1 +u2)*(math.sin(math.radians(k))*dt)
         d_theta = (r/l)*(u2-u1)*dt
         j = j + dj
         i = i + di
@@ -294,21 +297,22 @@ def action_four(i,j,k,R1,R2):
     l = 1.6
     r = 0.4
     dt = 0.1
-    u1 = (2*3.14*r*0)/60   #R1 and R2 diff for every subfunction
-    u2 = (2*3.14*r*R2)/60    
+    u1 = (2*3.14*0)/60   #R1 and R2 diff for every subfunction
+    u2 = (2*3.14*R2)/60    
     
     v = (r/2)*((u1/r)+ (u2/r))*0.1
     w = (r/l)*((u2/r) - (u1/r))/20
     
     theta = k 
     theta = angle_approximation(theta)
+    k = theta 
     point1 = i
     point2 = j
         
     for iterations in range(30):   # for 1 sec :- 0.05*20
 
-        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(theta))*dt)
-        di = (r/2)*(u1 +u2)*(math.sin(math.radians(theta))*dt)
+        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(k))*dt)
+        di = (r/2)*(u1 +u2)*(math.sin(math.radians(k))*dt)
         d_theta = (r/l)*(u2-u1)*dt
         j = j + dj
         i = i + di
@@ -349,21 +353,22 @@ def action_five(i,j,k,R1,R2):
     l = 1.6
     r = 0.4
     dt = 0.1
-    u1 = (2*3.14*r*R2)/60   #R1 and R2 diff for every subfunction
-    u2 = (2*3.14*r*0)/60  
+    u1 = (2*3.14*R2)/60   #R1 and R2 diff for every subfunction
+    u2 = (2*3.14*0)/60  
     
     v = (r/2)*((u1/r)+ (u2/r))*0.1
     w = (r/l)*((u2/r) - (u1/r))/20
     
     theta = k 
     theta = angle_approximation(theta)
+    k = theta 
     point1 = i
     point2 = j
         
     for iterations in range(30):   # for 1 sec :- 0.05*20
 
-        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(theta))*dt)
-        di = (r/2)*(u1 +u2)*(math.sin(math.radians(theta))*dt)
+        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(k))*dt)
+        di = (r/2)*(u1 +u2)*(math.sin(math.radians(k))*dt)
         d_theta = (r/l)*(u2-u1)*dt
         j = j + dj
         i = i + di
@@ -405,21 +410,22 @@ def action_six(i,j,k,R1,R2):
     l = 1.6
     r = 0.4
     dt = 0.1
-    u1 = (2*3.14*r*R2)/60   #R1 and R2 diff for every subfunction
-    u2 = (2*3.14*r*R2)/60
+    u1 = (2*3.14*R2)/60   #R1 and R2 diff for every subfunction
+    u2 = (2*3.14*R2)/60
 
     v = (r/2)*((u1/r)+ (u2/r))*0.1
     w = (r/l)*((u2/r) - (u1/r))/20
     
     theta = k 
     theta = angle_approximation(theta)
+    k = theta
     point1 = i
     point2 = j
         
     for iterations in range(30):   # for 1 sec :- 0.05*20
 
-        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(theta))*dt)
-        di = (r/2)*(u1 +u2)*(math.sin(math.radians(theta))*dt)
+        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(k))*dt)
+        di = (r/2)*(u1 +u2)*(math.sin(math.radians(k))*dt)
         d_theta = (r/l)*(u2-u1)*dt
         j = j + dj
         i = i + di
@@ -462,21 +468,22 @@ def action_seven(i,j,k,R1,R2):
     l = 1.6
     r = 0.4
     dt = 0.1
-    u1 = (2*3.14*r*R1)/60   #R1 and R2 diff for every subfunction
-    u2 = (2*3.14*r*R2)/60   
+    u1 = (2*3.14*R1)/60   #R1 and R2 diff for every subfunction
+    u2 = (2*3.14*R2)/60   
     
     v = (r/2)*((u1/r)+ (u2/r))*0.1
     w = (r/l)*((u2/r) - (u1/r))/20
 
     theta = k 
     theta = angle_approximation(theta)
+    k = theta
     point1 = i
     point2 = j
         
     for iterations in range(30):   # for 1 sec :- 0.05*20
 
-        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(theta))*dt)
-        di = (r/2)*(u1 +u2)*(math.sin(math.radians(theta))*dt)
+        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(k))*dt)
+        di = (r/2)*(u1 +u2)*(math.sin(math.radians(k))*dt)
         d_theta = (r/l)*(u2-u1)*dt
         j = j + dj
         i = i + di
@@ -518,21 +525,22 @@ def action_eight(i,j,k,R1,R2):
     l = 1.6
     r = 0.4
     dt = 0.1
-    u1 = (2*3.14*r*R2)/60   #R1 and R2 diff for every subfunction
-    u2 = (2*3.14*r*R1)/60   
+    u1 = (2*3.14*R2)/60   #R1 and R2 diff for every subfunction
+    u2 = (2*3.14*R1)/60   
     
     v = (r/2)*((u1/r)+ (u2/r))*0.1
     w = (r/l)*((u2/r) - (u1/r))/20
     
     theta = k 
     theta = angle_approximation(theta)
+    k = theta
     point1 = i
     point2 = j
         
     for iterations in range(30):   # for 1 sec :- 0.05*20
 
-        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(theta))*dt)
-        di = (r/2)*(u1 +u2)*(math.sin(math.radians(theta))*dt)
+        dj = (r/2)*(u1 +u2)*(math.cos(math.radians(k))*dt)
+        di = (r/2)*(u1 +u2)*(math.sin(math.radians(k))*dt)
         d_theta = (r/l)*(u2-u1)*dt
         j = j + dj
         i = i + di
