@@ -1,4 +1,4 @@
-Astar_phase_3
+Astar algorithm
 
 Astar algorithm is executed on differential drive constraints robot .
 There are two codes submitted . One is for small step (astar_diff.py) size is accurate but takes some time to compile and works for every point with less threshold. (test case compilation time :- 191 sec)
